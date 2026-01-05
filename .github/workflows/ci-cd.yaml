@@ -1,0 +1,24 @@
+name: CI/CD for deployment and testing
+
+on:
+    push:
+        branches:
+            - "**"
+jobs:
+    test:
+        name: Test Machine
+        runs-on: ubuntu-latest
+        steps:
+            - name: Code Checkout on test Machine
+              uses: actions/checkout@v3
+
+            - name: Setup NodeJS
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 20
+            - name: Install dependencies
+              run: npm install
+            - name: Run Tests
+              run: npm run ci:fix
+            - name: Build Application
+              run: npm run build
