@@ -42,8 +42,6 @@ lerna-debug.log*
 .env.development.local
 .env.test.local
 .env.production.local
-.env.local
-.env
 
 # temp directory
 .temp
@@ -64,8 +62,6 @@ logs
 data
 .pnpm-store
 pnpm-lock.yaml
-.env
-.env
 
 
 package-lock.json
@@ -84,7 +80,6 @@ jdadzok.pem
 
 jdadzok deploy.pem
 nginx
-.env.production
 sajib.pem
 jdadzok_server.pem
 *.pem
@@ -93,8 +88,6 @@ jdadzok_server.pem
 /generated/prisma
 *.secret
 # Deployment files
-.env.production
-.env
 *.pem
 *.key
 *.secret
@@ -104,11 +97,10 @@ logs/
 prisma/generated
 
 # Deployment files
-.env.production
-.env
 *.pem
 *.key
 *.secret
 deploy_key*
 backups/
 logs/
+config.bat
